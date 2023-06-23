@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Users List</title>
+    <link rel="stylesheet" href="~/css/tasks_index.css">
+</head>
+<body>
+    <div class="tasks-container">
+        <h1>User</h1>
+        @foreach (var user in @ViewBag.User)
+        {
+            <div class="item-container">
+                <p class="item-title">@user</p>
+            </div>
+        }
+    </div>
+</body>
+</html>

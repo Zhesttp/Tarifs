@@ -1,0 +1,128 @@
+@font-face {
+    font-family: 'Lexend';
+    src: url(fonts/Lexend-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url(fonts/Quicksand-Regular.ttf);
+}
+
+.logo-text {
+    font-family: 'Lexend', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    color: #FFFFFF;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 94px;
+}
+
+.logo {
+    width: 110px;
+    height: 50px;
+    margin-left: 50px;
+    padding-top: 18px;
+}
+
+.nav-links {
+    height: 25px;
+    margin-right: 50px;
+    padding-top: 33px;
+}
+
+.nav-link-element {
+    padding-left: 15px;
+    font-family: 'Quicksand', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    color: #FFFFFF;
+    opacity: 0.6;
+    text-decoration: none;
+}
+
+.nav-link-element:hover {
+    opacity: 1;
+}
+
+body {
+    background-color: black;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #ffffff;
+    font-family: 'Lexend', sans-serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    background-color: #f4f5f7;
+    border-radius: 25px;
+    box-shadow: 0 1px 3px rgba(9, 30, 66, 0.25);
+    padding: 20px;
+    margin-bottom: 20px;
+    flex-basis: calc(33.33% - 20px);
+}
+
+.card-title {
+    color: #172b4d;
+    text-transform: uppercase;
+    font-family: 'Lexend', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    font-family: 'Quicksand', sans-serif;
+    color: #172b4d;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.card-button {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.card-button:hover {
+    background-color: #bce81d;
+}
+
+

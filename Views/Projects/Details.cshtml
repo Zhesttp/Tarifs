@@ -1,0 +1,40 @@
+@model Task_Management_System.Models.Project
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/css/projects_details.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>@Model.Title Details</h1>
+        <div class="project-details">
+            <h2>@Model.Title</h2>
+            <p>@Model.Description</p>
+        </div>
+        <div class="actions">
+            <a href="@Url.Action("Index", "Projects")" class="btn-back">Back to List</a>
+            <a href="@Url.Action("Create", "Tasks", new { projectId = Model.Id })" class="btn-back">Add task</a>
+        </div>
+    </div>
+    <div class="tasks-container">
+        @foreach (var task in @ViewBag.Tasks)
+        {
+            <div class='item-container'>
+                <h3>@task.Title</h3>
+                <h4>@task.Description</h4>
+                <h3>@task.Progress</h3>
+                <h2>@task.Assignee</h2>
+                @if(User.Identity.Name == @Model.CreatorId){
+                    <a href="@Url.Action("Edit", "Tasks", new { id = task.Id })" class="btn=back">Edit</a>
+                }
+                 <div class="actions">
+                    <a href="@Url.Action("Edit", "Projects")" class="btn-back">Back to List</a>
+                </div>
+
+            </div>
+        }
+</body>
+</html>

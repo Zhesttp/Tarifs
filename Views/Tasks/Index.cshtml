@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task List</title>
+    <link rel="stylesheet" href="~/css/tasks_index.css">
+</head>
+<body>
+    <div class="tasks-container">
+        <h1>Tasks List</h1>
+
+        @foreach (var task in ViewBag.Tasks)
+        {
+            <div class="item-container">
+                <p class="item-title">@task.Title</p>
+                <p class="item-description">@task.Description</p>
+            </div>
+        }
+    </div>
+</body>
+</html>

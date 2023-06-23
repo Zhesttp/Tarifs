@@ -1,0 +1,87 @@
+@model Task_Management_System.Models.Task
+@{
+    ViewBag.Title = "Update";
+}
+
+<div>Update</div>
+
+@if (ViewBag.Message != null)
+{
+    <div role="alert">
+        @ViewBag.Message
+    </div>
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div>
+        <div>Tasks</div>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div>
+            <div>
+                <p>Id</p>
+                @Html.EditorFor(model => model.Id)
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <p>Title</p>
+                @Html.EditorFor(model => model.Title)
+            </div>
+        </div>
+
+
+        <div>
+            <div>
+                <p>Progress</p>
+                @Html.DropDownListFor(model => model.Progress,
+                    new List<SelectListItem>(){
+                        new SelectListItem("Backlog", "0"),
+                        new SelectListItem("ToDo", "1"),
+                        new SelectListItem("In Progress", "2"),
+                        new SelectListItem("Waiting For Answer", "3"),
+                        new SelectListItem("Blocked", "4"),
+                        new SelectListItem("Code Review", "5"),
+                        new SelectListItem("Closed", "6")
+                    }
+                )
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <p>AssigneeId</p>
+                @Html.EditorFor(model => model.AssigneeId)
+            </div>
+        </div>
+
+
+        <div>
+            <div>
+                <p>Description</p>
+                @Html.EditorFor(model => model.Description)
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <p>ProjectId</p>
+                @Html.EditorFor(model => model.ProjectId)
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <input type="submit" value="Create"/>
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
