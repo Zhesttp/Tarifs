@@ -23,8 +23,9 @@ public class UsersController : Controller
     [HttpGet]
     public IActionResult Details()
     {
-        var user = _context.Users.First(u => u.Email == User.Identity.Name);
-        ViewBag.Tarifs = user.Projects;
+        var user = _context.Projects.Where(p =>
+            p.Users.FirstOrDefault(u => u.Email == User.Identity.Name).Email == User.Identity.Name);
+        ViewBag.Tarifs = user;
         return View();
     }
 }

@@ -40,7 +40,15 @@ namespace Task_Management_System.Controllers
         public IActionResult Edit(string? id)
         {
             var project = _context.Projects.FirstOrDefault(p => p.Id == id);
-            return View(project);
+            var currentUser = _context.Users.FirstOrDefault(user => user.Email == User.Identity.Name);
+            if (!_context.Users.FirstOrDefault(u => u.Id == currentUser.Id).Projects.Exists(p => p.Id == project.Id))
+            {
+                currentUser.Projects.Add(project);
+                // _context.Projects.Update(project);
+                _context.SaveChanges();
+                ViewBag.Message = "Data Insert Successfully";
+            }
+            return Redirect("/Users/Details/");
         }
         [HttpPost]
         public IActionResult Edit(Project project)
@@ -49,7 +57,7 @@ namespace Task_Management_System.Controllers
             if (!_context.Users.FirstOrDefault(u => u.Id == currentUser.Id).Projects.Exists(p => p.Id == project.Id))
             {
                 currentUser.Projects.Add(project);
-                _context.Projects.Update(project);
+                // _context.Projects.Update(project);
                 _context.SaveChanges();
                 ViewBag.Message = "Data Insert Successfully";
             }

@@ -1,6 +1,7 @@
 @using Task_Management_System.Models
 
-@foreach (var item in ViewBag.Tarifs)
+@foreach (var tarif in ViewBag.Tarifs)
 {
-    <p>@Model.Title</p>
+    <h1>@tarif.Title</h1>
+    <h2>@tarif.Description</h2>
 }
