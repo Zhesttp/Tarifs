@@ -11658,24 +11658,25 @@
     ]
   },
   "packageFolders": {
-    "/home/daniele/.nuget/packages/": {}
+    "/Users/stepan/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/daniele/Desktop/Tarifs/Task-Management-System.csproj",
+      "projectUniqueName": "/Users/stepan/Documents/Tarifs/Task-Management-System.csproj",
       "projectName": "Task-Management-System",
-      "projectPath": "/home/daniele/Desktop/Tarifs/Task-Management-System.csproj",
-      "packagesPath": "/home/daniele/.nuget/packages/",
-      "outputPath": "/home/daniele/Desktop/Tarifs/obj/",
+      "projectPath": "/Users/stepan/Documents/Tarifs/Task-Management-System.csproj",
+      "packagesPath": "/Users/stepan/.nuget/packages/",
+      "outputPath": "/Users/stepan/Documents/Tarifs/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/daniele/.nuget/NuGet/NuGet.Config"
+        "/Users/stepan/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "/usr/local/share/dotnet/sdk/7.0.304/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -11746,6 +11747,20 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.18, 6.0.18]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.osx-arm64",
+            "version": "[6.0.18, 6.0.18]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.18, 6.0.18]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -11754,7 +11769,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.411/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.304/RuntimeIdentifierGraph.json"
       }
     }
   }

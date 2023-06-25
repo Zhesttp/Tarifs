@@ -19,27 +19,27 @@
     {
         @Html.AntiForgeryToken()
         <div class="container">
-            <h1>Create New Project</h1>
+            <h1>Создать новый тариф</h1>
             <hr/>
 
             @Html.ValidationSummary(true)
 
             <div class="form-group">
-                <label for="Title">Title</label>
+                <label for="Title">Название</label>
                 @Html.EditorFor(model => model.Title)
             </div>
 
             <div class="form-group">
-                <label for="Description">Description</label>
+                <label for="Description">Цена</label>
                 @Html.EditorFor(model => model.Description)
             </div>
 
             <div class="form-group">
-                <input type="submit" value="Create" />
+                <input type="submit" value="Создать" />
             </div>
 
             <div class="actions">
-                <a href="@Url.Action("Index", "Projects")" class="btn-back">Back to List</a>
+                <a href="@Url.Action("Index", "Projects")" class="btn-back">Назад к списку</a>
             </div>
         </div>
     }

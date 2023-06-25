@@ -1,51 +1,59 @@
 {
   "Files": [
     {
-      "Id": "/Users/stepan/Downloads/Task-Management-System/wwwroot/.DS_Store",
+      "Id": "/Users/stepan/Documents/Tarifs/wwwroot/.DS_Store",
       "PackagePath": "staticwebassets/.DS_Store"
     },
     {
-      "Id": "/Users/stepan/Downloads/Task-Management-System/wwwroot/css/.DS_Store",
+      "Id": "/Users/stepan/Documents/Tarifs/wwwroot/css/.DS_Store",
       "PackagePath": "staticwebassets/css/.DS_Store"
     },
     {
-      "Id": "/Users/stepan/Downloads/Task-Management-System/wwwroot/css/projects_create.css",
+      "Id": "/Users/stepan/Documents/Tarifs/wwwroot/css/login.css",
+      "PackagePath": "staticwebassets/css/login.css"
+    },
+    {
+      "Id": "/Users/stepan/Documents/Tarifs/wwwroot/css/projects_create.css",
       "PackagePath": "staticwebassets/css/projects_create.css"
     },
     {
-      "Id": "/Users/stepan/Downloads/Task-Management-System/wwwroot/css/projects_details.css",
+      "Id": "/Users/stepan/Documents/Tarifs/wwwroot/css/projects_details.css",
       "PackagePath": "staticwebassets/css/projects_details.css"
     },
     {
-      "Id": "/Users/stepan/Downloads/Task-Management-System/wwwroot/css/projects_edit.css",
+      "Id": "/Users/stepan/Documents/Tarifs/wwwroot/css/projects_edit.css",
       "PackagePath": "staticwebassets/css/projects_edit.css"
     },
     {
-      "Id": "/Users/stepan/Downloads/Task-Management-System/wwwroot/css/projects_index.css",
+      "Id": "/Users/stepan/Documents/Tarifs/wwwroot/css/projects_index.css",
       "PackagePath": "staticwebassets/css/projects_index.css"
     },
     {
-      "Id": "/Users/stepan/Downloads/Task-Management-System/wwwroot/css/tasks_create.css",
+      "Id": "/Users/stepan/Documents/Tarifs/wwwroot/css/registration.css",
+      "PackagePath": "staticwebassets/css/registration.css"
+    },
+    {
+      "Id": "/Users/stepan/Documents/Tarifs/wwwroot/css/tasks_create.css",
       "PackagePath": "staticwebassets/css/tasks_create.css"
     },
     {
-      "Id": "/Users/stepan/Downloads/Task-Management-System/wwwroot/css/tasks_index.css",
+      "Id": "/Users/stepan/Documents/Tarifs/wwwroot/css/tasks_index.css",
       "PackagePath": "staticwebassets/css/tasks_index.css"
     },
     {
-      "Id": "/Users/stepan/Downloads/Task-Management-System/wwwroot/fonts/Lexend-Regular.ttf",
+      "Id": "/Users/stepan/Documents/Tarifs/wwwroot/fonts/Lexend-Regular.ttf",
       "PackagePath": "staticwebassets/fonts/Lexend-Regular.ttf"
     },
     {
-      "Id": "/Users/stepan/Downloads/Task-Management-System/wwwroot/fonts/Poppins-Regular.ttf",
+      "Id": "/Users/stepan/Documents/Tarifs/wwwroot/fonts/Poppins-Regular.ttf",
       "PackagePath": "staticwebassets/fonts/Poppins-Regular.ttf"
     },
     {
-      "Id": "/Users/stepan/Downloads/Task-Management-System/wwwroot/fonts/Quicksand-Regular.ttf",
+      "Id": "/Users/stepan/Documents/Tarifs/wwwroot/fonts/Quicksand-Regular.ttf",
       "PackagePath": "staticwebassets/fonts/Quicksand-Regular.ttf"
     },
     {
-      "Id": "/Users/stepan/Downloads/Task-Management-System/wwwroot/fonts/Roboto-Bold.ttf",
+      "Id": "/Users/stepan/Documents/Tarifs/wwwroot/fonts/Roboto-Bold.ttf",
       "PackagePath": "staticwebassets/fonts/Roboto-Bold.ttf"
     },
     {

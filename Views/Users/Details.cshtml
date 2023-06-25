@@ -1,13 +1,95 @@
 @using Task_Management_System.Models
 
-@foreach (Project tarif in @ViewBag.Tarifs)
-{
-    <h1>@tarif.Title</h1>
-    <h2>@tarif.Description</h2>
-    <form asp-action="Destroy" method="post">
-        
-        <button id="@tarif.Id" type="submit" class="btn btn-outline-danger" value="@tarif.Id">Remove</button>
-        <a href="@Url.Action("Destroy", "Users", new { id = tarif.Id })">Remove</a>
-    </form>
-    @* <a href="@Url.Action("Destroy", "Users", new { id = tarif.Id })">Remove</a> *@
-}
+<style>
+    body {
+        background-color: black;
+        color: white;
+        font-family: 'Quicksand', sans-serif;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .tarif {
+        background-color: #333333;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    form {
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        display: inline-block;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 8px 16px;
+        text-decoration: none;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 16px;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+        background-color: #0056b3;
+    }
+
+    .btn-danger {
+        background-color: #dc3545;
+    }
+
+    .btn-back {
+        background-color: #bce81d;
+        color: #000000;
+    }
+
+    .actions {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        margin-left: 10px;
+        font-size: 16px;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<div class="container">
+    @foreach (Project tarif in @ViewBag.Tarifs)
+    {
+        <div class="tarif">
+            <h1>@tarif.Title</h1>
+            <h2>@tarif.Description</h2>
+            <form asp-action="Destroy" method="post">
+                <a href="@Url.Action("Destroy", "Users", new { id = tarif.Id })" class="btn btn-primary">Remove</a>
+            </form>
+        </div>
+    }
+    <div class="actions">
+        <a href="@Url.Action("Index", "Projects")" class="btn btn-back">Назад к списку</a>
+    </div>
+</div>

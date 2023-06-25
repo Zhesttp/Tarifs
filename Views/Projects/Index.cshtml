@@ -12,17 +12,19 @@
         <div class="logo">
             <a class="logo-text">Zhest</a>
         </div>
-        @if (ViewBag.CurrUser != null && ViewBag.CurrUser.Role.ToString() == "Admin")
-        {
-            <div class="nav-links">
-                <a class="nav-link-element" href="@Url.Action("Create", "Projects")">Create</a>
-            </div>
-        }
+        <div class="nav-links">
+                <a class="nav-link-element" href="@Url.Action("Details", "Users")">Подключенные тарифы</a>
+
+            @if (ViewBag.CurrUser != null && ViewBag.CurrUser.Role.ToString() == "Admin")
+            {
+                <a class="nav-link-element" href="@Url.Action("Create", "Projects")">Создать тариф</a>
+            }
+         </div>
     </nav>
     </header>
     <main>
     <div class="container">
-            <h1>Tarifs</h1>
+            <h1>Тарифы</h1>
 
             @if (ViewBag.Message != null)
             {
@@ -37,8 +39,7 @@
                     <div class="card">
                         <h2 class="card-title">@item.Title</h2>
                         <p class="card-description">@item.Description</p>
-                        <a class="card-button" href="@Url.Action("Details", "Projects", new { id = item.Id })">View Details</a>
-                        <a class="card-button" href="@Url.Action("Edit", "Projects", new { id = item.Id, userId = @User.Identity.Name })">Connect</a>
+                        <a class="card-button" href="@Url.Action("Edit", "Projects", new { id = item.Id, userId = @User.Identity.Name })">Подключить</a>
                     </div>
                 }
             </div>
