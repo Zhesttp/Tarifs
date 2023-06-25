@@ -1,7 +1,13 @@
 @using Task_Management_System.Models
 
-@foreach (var tarif in ViewBag.Tarifs)
+@foreach (Project tarif in @ViewBag.Tarifs)
 {
     <h1>@tarif.Title</h1>
     <h2>@tarif.Description</h2>
+    <form asp-action="Destroy" method="post">
+        
+        <button id="@tarif.Id" type="submit" class="btn btn-outline-danger" value="@tarif.Id">Remove</button>
+        <a href="@Url.Action("Destroy", "Users", new { id = tarif.Id })">Remove</a>
+    </form>
+    @* <a href="@Url.Action("Destroy", "Users", new { id = tarif.Id })">Remove</a> *@
 }

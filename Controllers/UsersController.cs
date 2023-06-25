@@ -28,4 +28,16 @@ public class UsersController : Controller
         ViewBag.Tarifs = user;
         return View();
     }
+
+    [HttpGet]
+    public async Task<IActionResult> Destroy(string? id)
+    {
+        Console.WriteLine($"\n\n\n\n\n{id}");
+        var project = _context.Projects.FirstOrDefault(p => p.Id == id);
+        var currentUser = _context.Users.FirstOrDefault(user => user.Email == User.Identity.Name);
+        _context.Projects.Remove(project);
+        currentUser.Projects.Remove(project);
+        await _context.SaveChangesAsync();
+        return Redirect("/Users/Details/");
+    }
 }

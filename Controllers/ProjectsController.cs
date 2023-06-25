@@ -41,12 +41,16 @@ namespace Task_Management_System.Controllers
         {
             var project = _context.Projects.FirstOrDefault(p => p.Id == id);
             var currentUser = _context.Users.FirstOrDefault(user => user.Email == User.Identity.Name);
-            if (!_context.Users.FirstOrDefault(u => u.Id == currentUser.Id).Projects.Exists(p => p.Id == project.Id))
+            try
             {
                 currentUser.Projects.Add(project);
                 // _context.Projects.Update(project);
                 _context.SaveChanges();
                 ViewBag.Message = "Data Insert Successfully";
+            }
+            catch (Exception ex)
+            {
+                return Redirect("/");
             }
             return Redirect("/Users/Details/");
         }
