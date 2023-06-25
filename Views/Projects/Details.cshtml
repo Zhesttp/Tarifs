@@ -27,14 +27,11 @@
                 <h4>@task.Description</h4>
                 <h3>@task.Progress</h3>
                 <h2>@task.Assignee</h2>
-                @if(User.Identity.Name == @Model.CreatorId){
-                    <a href="@Url.Action("Edit", "Tasks", new { id = task.Id })" class="btn=back">Edit</a>
-                }
-                 <div class="actions">
+                <div class="actions">
                     <a href="@Url.Action("Edit", "Projects")" class="btn-back">Back to List</a>
                 </div>
-
             </div>
         }
+    </div>
 </body>
 </html>

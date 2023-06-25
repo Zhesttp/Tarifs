@@ -11,7 +11,7 @@ namespace Task_Management_System.Models
         public Role Role { get; set; }
 
         public string FirstName { get; set; }
-        public ICollection<Project> Projects { get; set; }
         public ICollection<Models.Task> Tasks { get; set; }
+        public List<Project> Projects { get; } = new();
     }
 }

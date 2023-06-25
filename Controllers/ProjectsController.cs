@@ -21,12 +21,14 @@ namespace Task_Management_System.Controllers
         [HttpGet]
         public ActionResult Index()
         {
+            var cUser = _context.Users.FirstOrDefault(u => u.Email == User.Identity.Name);
+            ViewBag.CurrUser = cUser;
             var projects = _context.Projects.ToList();
             ViewBag.Projects = projects;
             return View(projects);
         }
         [HttpGet]
-        public ActionResult Details(string id)
+        public IActionResult Details(string id)
         {
             var projectTasks = _context.Tasks.Where(task => task.ProjectId == id);
             var project = _context.Projects.First(p => p.Id == id);
@@ -35,19 +37,24 @@ namespace Task_Management_System.Controllers
             return View(project);
         }
         [HttpGet]
-        public ActionResult Edit(string? id)
+        public IActionResult Edit(string? id)
         {
-            return View();
+            var project = _context.Projects.FirstOrDefault(p => p.Id == id);
+            return View(project);
         }
         [HttpPost]
-        public ViewResult Edit(Project project)
+        public IActionResult Edit(Project project)
         {
-            string currentUserId = _context.Users.FirstOrDefault(user => user.Email == User.Identity.Name).Id;
-            project.CreatorId = currentUserId;
-            _context.Projects.Update(project);
-            _context.SaveChanges();
-            ViewBag.Message = "Data Insert Successfully";
-            return View();
+            var currentUser = _context.Users.FirstOrDefault(user => user.Email == User.Identity.Name);
+            if (!_context.Users.FirstOrDefault(u => u.Id == currentUser.Id).Projects.Exists(p => p.Id == project.Id))
+            {
+                currentUser.Projects.Add(project);
+                _context.Projects.Update(project);
+                _context.SaveChanges();
+                ViewBag.Message = "Data Insert Successfully";
+            }
+
+            return Redirect("/Users/Details/");
         }
         [HttpGet]
         public ActionResult Create()
@@ -58,7 +65,6 @@ namespace Task_Management_System.Controllers
         public ViewResult Create(Project project)
         {
             string currentUserId = _context.Users.FirstOrDefault(user => user.Email == User.Identity.Name).Id;
-            project.CreatorId = currentUserId;
             _context.Projects.Add(project);
             _context.SaveChanges();
             ViewBag.Message = "Data Insert Successfully";

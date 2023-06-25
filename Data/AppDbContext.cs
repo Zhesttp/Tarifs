@@ -14,11 +14,12 @@ namespace Task_Management_System.Data
         public DbSet<Project> Projects { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Models.Task> Tasks { get; set; }
-        public DbSet<ProjectUser> ProjectUser { get; set; }
+        //public DbSet<ProjectUser> ProjectUser { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
 
             modelBuilder.Entity<Models.Task>()
             .HasOne(u => u.Assignee);
@@ -26,11 +27,25 @@ namespace Task_Management_System.Data
             modelBuilder.Entity<Models.Task>()
             .HasOne(p => p.Project);
 
-            modelBuilder.Entity<User>()
-            .HasMany(p => p.Projects);
-
             modelBuilder.Entity<Project>()
-            .HasOne(p => p.Creator);
+            .HasMany(p => p.Users)
+            .WithMany(u => u.Projects)
+            .UsingEntity(
+                "ProjectUser",
+                l => l.HasOne(typeof(User)).WithMany().HasForeignKey("UsersId").HasPrincipalKey(nameof(User.Id)),
+                r => r.HasOne(typeof(Project)).WithMany().HasForeignKey("ProjectsId").HasPrincipalKey(nameof(Project.Id)),
+                j => j.HasKey("ProjectsId", "UsersId")
+            );
+
+            modelBuilder.Entity<User>()
+            .HasMany(p => p.Projects)
+            .WithMany(u => u.Users)
+            .UsingEntity(
+                "ProjectUser",
+                l => l.HasOne(typeof(Project)).WithMany().HasForeignKey("ProjectsId").HasPrincipalKey(nameof(Project.Id)),
+                r => r.HasOne(typeof(User)).WithMany().HasForeignKey("UsersId").HasPrincipalKey(nameof(User.Id)),
+                j => j.HasKey("UsersId", "ProjectsId")
+            );
 
             modelBuilder.Entity<Project>().Property(p => p.Id)
         .ValueGeneratedOnAdd();

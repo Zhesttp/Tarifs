@@ -1,3 +1,4 @@
+@using Task_Management_System.Models
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,9 +12,12 @@
         <div class="logo">
             <a class="logo-text">Zhest</a>
         </div>
-        <div class="nav-links">
-            <a class="nav-link-element" href="@Url.Action("Create", "Projects")">Create</a>
-        </div>
+        @if (ViewBag.CurrUser != null && ViewBag.CurrUser.Role.ToString() == "Admin")
+        {
+            <div class="nav-links">
+                <a class="nav-link-element" href="@Url.Action("Create", "Projects")">Create</a>
+            </div>
+        }
     </nav>
     </header>
     <main>

@@ -13,7 +13,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
 builder.Services.AddDbContext<Task_Management_System.Data.AppDbContext>(options =>
-    options.UseNpgsql(@"Server=localhost;Port=5433;Database=task_management;User ID=postgres;Integrated Security=true;Pooling=true;"));
+    options.UseNpgsql(@"Server=localhost;Port=5432;Database=task_management;User ID=postgres;Integrated Security=true;Pooling=true;"));
 
 // builder.Services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = true)
 //     .AddEntityFrameworkStores<Task_Management_System.Data.AppDbContext>();

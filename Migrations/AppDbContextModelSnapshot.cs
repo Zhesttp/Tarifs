@@ -225,14 +225,25 @@ namespace Task_Management_System.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("ProjectUser", b =>
+                {
+                    b.Property<string>("UsersId")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ProjectsId")
+                        .HasColumnType("text");
+
+                    b.HasKey("UsersId", "ProjectsId");
+
+                    b.HasIndex("ProjectsId");
+
+                    b.ToTable("ProjectUser");
+                });
+
             modelBuilder.Entity("Task_Management_System.Models.Project", b =>
                 {
                     b.Property<string>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("text");
-
-                    b.Property<string>("CreatorId")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Description")
@@ -243,34 +254,7 @@ namespace Task_Management_System.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CreatorId");
-
                     b.ToTable("Projects");
-                });
-
-            modelBuilder.Entity("Task_Management_System.Models.ProjectUser", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("ProjectId")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ProjectId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("ProjectUser");
                 });
 
             modelBuilder.Entity("Task_Management_System.Models.Task", b =>
@@ -372,34 +356,19 @@ namespace Task_Management_System.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Task_Management_System.Models.Project", b =>
+            modelBuilder.Entity("ProjectUser", b =>
                 {
-                    b.HasOne("Task_Management_System.Models.User", "Creator")
-                        .WithMany("Projects")
-                        .HasForeignKey("CreatorId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Creator");
-                });
-
-            modelBuilder.Entity("Task_Management_System.Models.ProjectUser", b =>
-                {
-                    b.HasOne("Task_Management_System.Models.Project", "Project")
+                    b.HasOne("Task_Management_System.Models.Project", null)
                         .WithMany()
-                        .HasForeignKey("ProjectId")
+                        .HasForeignKey("ProjectsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Task_Management_System.Models.User", "User")
+                    b.HasOne("Task_Management_System.Models.User", null)
                         .WithMany()
-                        .HasForeignKey("UserId")
+                        .HasForeignKey("UsersId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Project");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Task_Management_System.Models.Task", b =>
@@ -423,8 +392,6 @@ namespace Task_Management_System.Migrations
 
             modelBuilder.Entity("Task_Management_System.Models.User", b =>
                 {
-                    b.Navigation("Projects");
-
                     b.Navigation("Tasks");
                 });
 #pragma warning restore 612, 618

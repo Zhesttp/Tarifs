@@ -19,10 +19,12 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
 using Task_Management_System.Models;
+using Task_Management_System.Data;
 namespace Task_Management_System.Areas.Identity.Pages.Account
 {
     public class RegisterModel : PageModel
     {
+        private AppDbContext _context;
         private readonly SignInManager<User> _signInManager;
         private readonly UserManager<User> _userManager;
         private readonly IUserStore<User> _userStore;
