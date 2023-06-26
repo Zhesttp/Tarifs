@@ -1,60 +1,136 @@
 {
   "Files": [
     {
-      "Id": "/Users/stepan/Documents/Tarifs/wwwroot/.DS_Store",
+      "Id": "/Users/onereevs/Documents/Tarifs/wwwroot/.DS_Store",
       "PackagePath": "staticwebassets/.DS_Store"
     },
     {
-      "Id": "/Users/stepan/Documents/Tarifs/wwwroot/css/.DS_Store",
+      "Id": "/Users/onereevs/Documents/Tarifs/wwwroot/css/.DS_Store",
       "PackagePath": "staticwebassets/css/.DS_Store"
     },
     {
-      "Id": "/Users/stepan/Documents/Tarifs/wwwroot/css/login.css",
+      "Id": "/Users/onereevs/Documents/Tarifs/wwwroot/css/login.css",
       "PackagePath": "staticwebassets/css/login.css"
     },
     {
-      "Id": "/Users/stepan/Documents/Tarifs/wwwroot/css/projects_create.css",
+      "Id": "/Users/onereevs/Documents/Tarifs/wwwroot/css/projects_create.css",
       "PackagePath": "staticwebassets/css/projects_create.css"
     },
     {
-      "Id": "/Users/stepan/Documents/Tarifs/wwwroot/css/projects_details.css",
+      "Id": "/Users/onereevs/Documents/Tarifs/wwwroot/css/projects_details.css",
       "PackagePath": "staticwebassets/css/projects_details.css"
     },
     {
-      "Id": "/Users/stepan/Documents/Tarifs/wwwroot/css/projects_edit.css",
+      "Id": "/Users/onereevs/Documents/Tarifs/wwwroot/css/projects_edit.css",
       "PackagePath": "staticwebassets/css/projects_edit.css"
     },
     {
-      "Id": "/Users/stepan/Documents/Tarifs/wwwroot/css/projects_index.css",
+      "Id": "/Users/onereevs/Documents/Tarifs/wwwroot/css/projects_index.css",
       "PackagePath": "staticwebassets/css/projects_index.css"
     },
     {
-      "Id": "/Users/stepan/Documents/Tarifs/wwwroot/css/registration.css",
+      "Id": "/Users/onereevs/Documents/Tarifs/wwwroot/css/registration.css",
       "PackagePath": "staticwebassets/css/registration.css"
     },
     {
-      "Id": "/Users/stepan/Documents/Tarifs/wwwroot/css/tasks_create.css",
+      "Id": "/Users/onereevs/Documents/Tarifs/wwwroot/css/style.css",
+      "PackagePath": "staticwebassets/css/style.css"
+    },
+    {
+      "Id": "/Users/onereevs/Documents/Tarifs/wwwroot/css/tasks_create.css",
       "PackagePath": "staticwebassets/css/tasks_create.css"
     },
     {
-      "Id": "/Users/stepan/Documents/Tarifs/wwwroot/css/tasks_index.css",
+      "Id": "/Users/onereevs/Documents/Tarifs/wwwroot/css/tasks_index.css",
       "PackagePath": "staticwebassets/css/tasks_index.css"
     },
     {
-      "Id": "/Users/stepan/Documents/Tarifs/wwwroot/fonts/Lexend-Regular.ttf",
+      "Id": "/Users/onereevs/Documents/Tarifs/wwwroot/fonts/Lexend-Regular.ttf",
       "PackagePath": "staticwebassets/fonts/Lexend-Regular.ttf"
     },
     {
-      "Id": "/Users/stepan/Documents/Tarifs/wwwroot/fonts/Poppins-Regular.ttf",
+      "Id": "/Users/onereevs/Documents/Tarifs/wwwroot/fonts/Poppins-Regular.ttf",
       "PackagePath": "staticwebassets/fonts/Poppins-Regular.ttf"
     },
     {
-      "Id": "/Users/stepan/Documents/Tarifs/wwwroot/fonts/Quicksand-Regular.ttf",
+      "Id": "/Users/onereevs/Documents/Tarifs/wwwroot/fonts/Quicksand-Regular.ttf",
       "PackagePath": "staticwebassets/fonts/Quicksand-Regular.ttf"
     },
     {
-      "Id": "/Users/stepan/Documents/Tarifs/wwwroot/fonts/Roboto-Bold.ttf",
+      "Id": "/Users/onereevs/Documents/Tarifs/wwwroot/fonts/Roboto-Bold.ttf",
       "PackagePath": "staticwebassets/fonts/Roboto-Bold.ttf"
+    },
+    {
+      "Id": "/Users/onereevs/Documents/Tarifs/wwwroot/fonts/playfair-display-v30-cyrillic_latin-700.woff2",
+      "PackagePath": "staticwebassets/fonts/playfair-display-v30-cyrillic_latin-700.woff2"
+    },
+    {
+      "Id": "/Users/onereevs/Documents/Tarifs/wwwroot/fonts/playfair-display-v30-cyrillic_latin-900.woff2",
+      "PackagePath": "staticwebassets/fonts/playfair-display-v30-cyrillic_latin-900.woff2"
+    },
+    {
+      "Id": "/Users/onereevs/Documents/Tarifs/wwwroot/fonts/playfair-display-v30-cyrillic_latin-regular.woff2",
+      "PackagePath": "staticwebassets/fonts/playfair-display-v30-cyrillic_latin-regular.woff2"
+    },
+    {
+      "Id": "/Users/onereevs/Documents/Tarifs/wwwroot/fonts/roboto-v30-latin-100.woff2",
+      "PackagePath": "staticwebassets/fonts/roboto-v30-latin-100.woff2"
+    },
+    {
+      "Id": "/Users/onereevs/Documents/Tarifs/wwwroot/fonts/roboto-v30-latin-300.woff2",
+      "PackagePath": "staticwebassets/fonts/roboto-v30-latin-300.woff2"
+    },
+    {
+      "Id": "/Users/onereevs/Documents/Tarifs/wwwroot/fonts/roboto-v30-latin-regular.woff2",
+      "PackagePath": "staticwebassets/fonts/roboto-v30-latin-regular.woff2"
+    },
+    {
+      "Id": "/Users/onereevs/Documents/Tarifs/wwwroot/img/.DS_Store",
+      "PackagePath": "staticwebassets/img/.DS_Store"
+    },
+    {
+      "Id": "/Users/onereevs/Documents/Tarifs/wwwroot/img/granny.jpg",
+      "PackagePath": "staticwebassets/img/granny.jpg"
+    },
+    {
+      "Id": "/Users/onereevs/Documents/Tarifs/wwwroot/img/intro-bg-2-2.png",
+      "PackagePath": "staticwebassets/img/intro-bg-2-2.png"
+    },
+    {
+      "Id": "/Users/onereevs/Documents/Tarifs/wwwroot/img/scrin-icon.png",
+      "PackagePath": "staticwebassets/img/scrin-icon.png"
+    },
+    {
+      "Id": "/Users/onereevs/Documents/Tarifs/wwwroot/img/svg/.DS_Store",
+      "PackagePath": "staticwebassets/img/svg/.DS_Store"
+    },
+    {
+      "Id": "/Users/onereevs/Documents/Tarifs/wwwroot/img/svg/business-icon.svg",
+      "PackagePath": "staticwebassets/img/svg/business-icon.svg"
+    },
+    {
+      "Id": "/Users/onereevs/Documents/Tarifs/wwwroot/img/svg/family-icon.svg",
+      "PackagePath": "staticwebassets/img/svg/family-icon.svg"
+    },
+    {
+      "Id": "/Users/onereevs/Documents/Tarifs/wwwroot/img/svg/gs-logo.svg",
+      "PackagePath": "staticwebassets/img/svg/gs-logo.svg"
+    },
+    {
+      "Id": "/Users/onereevs/Documents/Tarifs/wwwroot/img/svg/niggers-icon.svg",
+      "PackagePath": "staticwebassets/img/svg/niggers-icon.svg"
+    },
+    {
+      "Id": "/Users/onereevs/Documents/Tarifs/wwwroot/img/svg/sofa-icon.svg",
+      "PackagePath": "staticwebassets/img/svg/sofa-icon.svg"
+    },
+    {
+      "Id": "/Users/onereevs/Documents/Tarifs/wwwroot/img/telephone-icon.png",
+      "PackagePath": "staticwebassets/img/telephone-icon.png"
+    },
+    {
+      "Id": "/Users/onereevs/Documents/Tarifs/wwwroot/js/main.js",
+      "PackagePath": "staticwebassets/js/main.js"
     },
     {
       "Id": "obj/Debug/net6.0/staticwebassets/msbuild.Task-Management-System.Microsoft.AspNetCore.StaticWebAssets.props",

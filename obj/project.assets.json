@@ -11658,24 +11658,26 @@
     ]
   },
   "packageFolders": {
-    "/home/daniele/.nuget/packages/": {}
+    "/Users/onereevs/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/daniele/Desktop/Tarifs/Task-Management-System.csproj",
+      "projectUniqueName": "/Users/onereevs/Documents/Tarifs/Task-Management-System.csproj",
       "projectName": "Task-Management-System",
-      "projectPath": "/home/daniele/Desktop/Tarifs/Task-Management-System.csproj",
-      "packagesPath": "/home/daniele/.nuget/packages/",
-      "outputPath": "/home/daniele/Desktop/Tarifs/obj/",
+      "projectPath": "/Users/onereevs/Documents/Tarifs/Task-Management-System.csproj",
+      "packagesPath": "/Users/onereevs/.nuget/packages/",
+      "outputPath": "/Users/onereevs/Documents/Tarifs/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/daniele/.nuget/NuGet/NuGet.Config"
+        "/Users/onereevs/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "/usr/local/share/dotnet/library-packs": {},
+        "/usr/local/share/dotnet/sdk/7.0.302/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -11754,7 +11756,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.411/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.302/RuntimeIdentifierGraph.json"
       }
     }
   }
