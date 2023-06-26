@@ -30,14 +30,19 @@ public class UsersController : Controller
     }
 
     [HttpGet]
-    public async Task<IActionResult> Destroy(string? id)
+    public IActionResult Destroy(string? id)
     {
-        Console.WriteLine($"\n\n\n\n\n{id}");
-        var project = _context.Projects.FirstOrDefault(p => p.Id == id);
-        var currentUser = _context.Users.FirstOrDefault(user => user.Email == User.Identity.Name);
-        _context.Projects.Remove(project);
-        currentUser.Projects.Remove(project);
-        await _context.SaveChangesAsync();
+        var project = _context.Projects.Include(p => p.Users).Single(u => u.Id == id);
+        var currentUser = _context.Users.Single(user => user.Email == User.Identity.Name);
+        project.Users.Remove(project.Users.Where(u => u.Id == currentUser.Id).FirstOrDefault());
+        _context.SaveChanges();
+
+
+//         var groupToUpdate = _userGroupsContext.Groups.Include(g => g.UserGroups).Single(u => u.Id == userVm.groupsIds[0]);
+// var userToUpdate = _userGroupsContext.Users.Single(u => u.Id == userVm.user.Id);
+
+// groupToUpdate.UserGroups.Remove(groupToUpdate.UserGroups.Where(ugu => ugu.UserId == userToUpdate.Id).FirstOrDefault());
+// _userGroupsContext.SaveChanges();
         return Redirect("/Users/Details/");
     }
 }
